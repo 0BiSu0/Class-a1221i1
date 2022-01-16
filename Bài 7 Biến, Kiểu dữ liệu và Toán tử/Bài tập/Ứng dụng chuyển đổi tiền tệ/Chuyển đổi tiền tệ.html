@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền</title>
+    <style>
+.select{
+    text-align: left ;
+    padding: 20px;
+}
+.button{
+    text-align: left;
+    padding-left: 20px ;
+}
+.field{
+    background-color: yellowgreen;
+    width: 30%;
+}
+.button1{
+    padding-left: 20px ;
+}
+.p{
+ text-align: center;
+}
+    </style>
+<body>
+<fieldset class="field">
+<div class="p"><p>AMOUNT</p></div>
+<div class="button">
+    <input type="text" id="input">
+</div>
+<div class="select">
+    <select name="" id="select1">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+    <select name="" id="select2">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+    </select>
+</div>
+<div class="button1"><button onclick="ChuyenDoi()">Convert</button></div>
+<script>
+    function ChuyenDoi() {
+        let Giatridauvao = document.getElementById('input').value;
+        let select1  = document.getElementById('select1').value;
+        let select2  = document.getElementById('select2').value;
+        alert(document.getElementById('select1').value);
+        if(select1 == select2){
+        alert('Số tiền đã chuyển đổi là: ' + Giatridauvao);
+        }
+        if (select1 == "vnd" && select2 == "usd"){
+        alert('Số tiền đã chuyển đổi là : ' + Giatridauvao/24000 + 'USD');
+        }
+        if(select1 == "usd" && select2 == "vnd"){
+            alert('Số tiền đã chuyển đổi là: ' + Giatridauvao*24000 + 'Vnd');
+        }
+        }
+</script>
+</fieldset>
+</body>
+</html>
