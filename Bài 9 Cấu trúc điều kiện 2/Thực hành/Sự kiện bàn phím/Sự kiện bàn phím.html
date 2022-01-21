@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sự kiện bàn phím</title>
+</head>
+<body onload="docReady()">
+
+    <img id="monkey" src="https://scontent.xx.fbcdn.net/v/t39.1997-6/s168x128/64796910_2147910075330824_6417232927557419008_n.png?_nc_cat=1&ccb=1-5&_nc_sid=0572db&_nc_ohc=YLr0nt5QTBsAX9flFrA&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=00_AT_AKT76jqssdW9dCAMmh6JPzpHH9q63CsI0TG7RFtefOQ&oe=61EC81C3" style="position:absolute;left:0; top:0;" width="90px" height="100px">
+    <script>
+    function upArrowPressed(){
+        let element = document.getElementById("monkey");
+        element.style.top = parseInt(element.style.top) -5 + 'px';
+    }
+    function downArrowPressed(){
+        var element = document.getElementById("monkey");
+        element.style.top = parseInt(element.style.top) + 5 +'px';
+    }
+    function leftArrowPressed(){
+        var element = document.getElementById("monkey");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+    function rightArrowPressed(){
+        var element = document.getElementById("monkey");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+    }
+    function moveSelection(evt){
+        switch (evt.keyCode){
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    function docReady(){
+        window.addEventListener('keydown', moveSelection);
+    }
+    </script>
+</body>
+</html>
