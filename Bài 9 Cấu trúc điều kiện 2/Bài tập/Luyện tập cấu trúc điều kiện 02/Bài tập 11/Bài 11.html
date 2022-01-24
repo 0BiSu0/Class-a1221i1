@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 11</title>
+</head>
+<body>
+
+</body>
+<script>
+    let wage = Number(prompt("Nhập mức lương của bạn:"));
+    let taxMoney;
+    if (wage > 15000000) {
+        taxMoney = wage * 0.3;
+    } else if (wage > 7000000) {
+        taxMoney = wage * 0.2;
+    } else if (wage > 0) {
+        taxMoney = wage * 0.1;
+    } else {
+        taxMoney = 0;
+    }
+    alert("Thuế thu nhập của bạn là : " + taxMoney);
+</script>
+</html>
