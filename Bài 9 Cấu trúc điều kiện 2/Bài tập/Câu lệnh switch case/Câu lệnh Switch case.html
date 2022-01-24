@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh swtich case </title>
+</head>
+<body>
+<form id="myForm">
+<div>
+    <tr>
+        <th colspan="2">Tính số ngày trong một tháng: </th>
+    </tr>
+    <tr>
+    <input id="thang" type="text" placeholder="Nhập tháng">
+    <td>
+    <button type="button" onclick="Tinhsongay()">Tính số ngày</button>
+    </td>
+    </tr>
+    <script>
+function Tinhsongay(){
+    let thang = document.getElementById("thang").value;
+    thang = parseInt(thang);
+    switch (thang){
+        case 1:{
+            alert('Tháng 1 cố 31 ngày');
+            break;
+        }
+        case 2: {
+            alert('Tháng 2 có 28 ngày');
+            break;
+        }
+        case 3: {
+            alert('Tháng 3 có 31 ngày');
+            break;
+        }
+        case 4: {
+            alert('Tháng 4 có 30 ngày');
+            break;
+        }
+        case 5: {
+            alert('Tháng 5 có 31 ngày');
+            break;
+        }
+        case 6: {
+            alert('Tháng 6 có 30 ngày');
+            break;
+        }
+        case 7: {
+            alert('Tháng 7 có 31 ngày');
+            break;
+        }
+        case 8: {
+            alert('Tháng 8 có 30 ngày');
+            break;
+        }
+        case 9: {
+            alert('Tháng 9 có 31 ngày');
+            break;
+        }
+        case 10: {
+            alert('Tháng 10 có 30 ngày');
+            break;
+        }
+        case 11: {
+            alert('Tháng 11 có 31 ngày');
+            break;
+        }
+        case 12: {
+            alert('Tháng 12 có 30 ngày');
+            break
+        }
+    }
+}
+    </script>
+</div>
+</form>
+</body>
+</html>
