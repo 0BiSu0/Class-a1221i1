@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+</body>
+<script>
+    let n = prompt(" Nhập số n: ");
+    let i = 2, result = "";
+     while (i < n) {
+         check = 1;
+         let j = 2;
+         while (j < i) {
+             if (i % j == 0) {
+                 check = 0;
+             }
+             j++;
+         }
+         if (check == 1) result += i + " ";
+         i++;
+     }
+     console.log(result);
+</script>
+</html>
