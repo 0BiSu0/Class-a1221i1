@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 5</title>
+</head>
+<body>
+<script>
+    function Baitap5() {
+        let array1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let array2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let variable = true;
+
+        let array = prompt('Enter name of star: ');
+        for(let i = 0; i < array1.length; i++){
+            if (array1[i]===array){
+                variable = false;
+                n = i;
+                break;
+            }
+        }
+        while (variable) {
+            let array = prompt('You entered ron star name, please re-enter: ');
+            for(let i = 0; i < array1.length; i++){
+                if (array1[i]===array){
+                    variable = false;
+                    n = i;
+                    break;
+                }
+            }
+        }
+        alert(array1[n] + ' belong to ' + array2[n] + ' Constellation ')
+    }
+</script>
+</body>
+</html>
