@@ -6,18 +6,22 @@
 </head>
 <body>
 <script>
-    let x = Number(prompt("Nhap vao x: "));
-    let y = Number(prompt("Nhap vao y: "));
-    for (i = 0; i < y; i++){
-        for(j = 0; j < x; j++){
-            if (i == 0 || i == y - 1 || j == 0 || j == x - 1){
-                document.write(" * ");
-            }else {
-                document.write(" ");
-            }
+let width = parseInt(prompt("Nhập vào chiều rộng: "));
+let height = parseInt(prompt("Nhập vào chiều cao: "));
+let shape = "";
+for (let i = 1; i <= height; i++){
+    for (let j = 1; j <= width; j++){
+        if (i === 1 || i === height){
+            shape += "*";
+        }else if (j === 1 || j === width){
+            shape += "*";
+        }else {
+            shape += "$ensp;";
         }
-        document.write("<br/>");
     }
+    shape += "<br>";
+}
+document.write(shape);
 </script>
 </body>
 </html>

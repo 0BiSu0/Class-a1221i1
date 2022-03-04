@@ -6,15 +6,21 @@
 </head>
 <body>
 <script>
-    var N = prompt('Nhap gia tri N')
-    N = parseInt(N)
-    for(i=0;i<N;i++) {
-        //tao hang (row) *
-        for(j=0;j<=i;j++) {
-            document.writeln(" * ")
+    let height = parseInt(prompt("Nhập vào chiều cao" ));
+    let shape = "";
+    for (let i = 1; i <= height; i++){
+        for (let j = 1; j <= height; j++){
+            if ( i === height){
+                shape += "*";
+            }else if(j === 1 || j === i){
+                shape += "*";
+            }else {
+                shape += "&ensp;"
+            }
         }
-        document.writeln("<br/>")
+        shape += " <br>";
     }
+    document.write(shape);
 </script>
 </body>
 </html>

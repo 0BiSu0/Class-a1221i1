@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .fls{
+            text-align: left;
+            margin: 40px;
+        }
+        .ip{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+<fieldset class="fls">
+<h1>Menu</h1>
+<ol>
+<li>Cafe</li>
+<li>Cam vắt</li>
+<li>Nước ép cà rốt</li>
+<li>Nước ép cà chua</li>
+<li>Nước lọc</li>
+<li>Nước dừa</li>
+<input class="ip" type="button" value="Order" onclick="order()">
+</ol>
+</fieldset>
+<script>
+    function order(){
+        let menu = ["Cafe","Cam vắt","Nước ép cà rốt","Nước ep cà chua","Nước lọc","Nước dừa" ]
+        let customer = prompt("Mời bạn chọn thức uống!!!")
+         switch (menu){
+             case 1:
+                 document.write("Bạn đã chọn Cafe ");
+                 break;
+             case 2:
+                 document.write("Bạn đã chọn Cam vắt");
+                 break;
+             case 3:
+                 document.write("Bạn đã chọn Nước ép cà rốt ");
+                 break;
+             case 4:
+                 document.write("Bạn đã chọn Nước ép cà chua ");
+                 break;
+             case 5:
+                 document.write("Bạn đã chọn Nước lọc ");
+                 break;
+             case 6:
+                 document.write("Bạn đã chọn Nước dừa");
+                 break;
+             default:
+                 document.write("Vui lòng chọn thức uống !!!")
+        }
+    }
+</script>
+</body>
+</html>

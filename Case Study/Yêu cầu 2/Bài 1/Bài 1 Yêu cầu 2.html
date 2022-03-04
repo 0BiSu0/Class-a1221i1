@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let sothue,luongrong;
+    let n = Number(prompt("Nhập vào số lương: "));
+    if(n > 15){
+        sothue = n * 20/100
+    document.write("Số thuế là: " + sothue)
+        document.write("<br/>")
+        luongrong = n - sothue
+        document.write("Lương nhận thực tế là: " + luongrong)
+    }else if (n >= 7){
+        sothue = n * 10/100
+        document.write("Số thuế là: " + sothue)
+        document.write("<br/>")
+        luongrong = n - sothue
+        document.write("Lương nhận thực tế là: " + luongrong)
+    }else{
+        sothue=n * 5/100
+        document.write("Số thuế là: " + sothue)
+        document.write("<br/>")
+        luongrong = n - sothue
+        document.write("Lương nhận thực tế là: " + luongrong)
+    }
+</script>
+</body>
+</html>
