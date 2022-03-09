@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều khiển Tivi</title>
+</head>
+<body>
+<script>
+    let Television = function (remoteCode){
+        this.tvProgram = 1;
+        this.remoteCode = remoteCode;
+        this.volume = 20;
+        this.isOn = false;
+        this.checkIsOn = function (){
+            if (this.isOn){
+                console.log('Tv is On');
+            }else {
+                console.log("Tv is Off");
+            }
+
+        };
+        this.turn = function (){
+            if(this.isOn){
+                this.isOn = false;
+                console.log("Turn Off the TV");
+            }else {
+                this.isOn= true;
+                console.log("Turn On the TV");
+            }
+        };
+        this.adjustVol = function (number){
+            if(this.isOn){
+                number =Number(number);
+                this.volume += number;
+                console.log("Âm lượng:" + this.volume);
+            }else {
+                console.log("TV đang tắt!!!");
+            }
+            };
+        };
+        this.adjustTVProgram = function (number){
+        if(this.isOn){
+            number = Number(number);
+            this.tvProgrm = number;
+            console.log("Tv chuyển sang kênh" + this.tvProgram);
+        }else {
+            console.log("Tv đang tắt!!!");
+        
+        };
+    };
+    let Remote = function (remoteCode){
+        this.remoteCode = remoteCode;
+        this.turnVolume = function (tv,numver){
+            if(this.remoteCode === ty.remoteCode){
+                tv.adjustVol(number);
+            }
+        };
+        this.turnTVProgram = function (tv, numver){
+            if(this.remoteCode === tv.remoteCode){
+                tv.adjustTVProgram(number);
+            }
+        };
+        this.turnOnOff = function (tv){
+            if(this.remoteCode === tv.remoteCode){
+                tv.turn();
+            }
+        }
+    };
+    let sony = new Television(10221);
+    console.log(sony);
+    sony.turn();
+    sony.adjustTVProgram(7);
+    let sonyRemote = new Remote(10112);
+    sonyRemote.turnVolume(sony, 2);
+    sonyRemote.turnTVProgram(sony, 3);
+    sonyRemote.turnOnOff(sony);
+</script>
+</body>
+</html>

@@ -2,57 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        .fls{
-            text-align: left;
-            margin: 40px;
-        }
-        .ip{
-            margin: 20px;
-        }
-    </style>
+    <title>Bài 5 </title>
 </head>
 <body>
-<fieldset class="fls">
-<h1>Menu</h1>
-<ol>
-<li>Cafe</li>
-<li>Cam vắt</li>
-<li>Nước ép cà rốt</li>
-<li>Nước ép cà chua</li>
-<li>Nước lọc</li>
-<li>Nước dừa</li>
-<input class="ip" type="button" value="Order" onclick="order()">
-</ol>
-</fieldset>
 <script>
-    function order(){
-        let menu = ["Cafe","Cam vắt","Nước ép cà rốt","Nước ep cà chua","Nước lọc","Nước dừa" ]
-        let customer = prompt("Mời bạn chọn thức uống!!!")
-         switch (menu){
-             case 1:
-                 document.write("Bạn đã chọn Cafe ");
-                 break;
-             case 2:
-                 document.write("Bạn đã chọn Cam vắt");
-                 break;
-             case 3:
-                 document.write("Bạn đã chọn Nước ép cà rốt ");
-                 break;
-             case 4:
-                 document.write("Bạn đã chọn Nước ép cà chua ");
-                 break;
-             case 5:
-                 document.write("Bạn đã chọn Nước lọc ");
-                 break;
-             case 6:
-                 document.write("Bạn đã chọn Nước dừa");
-                 break;
-             default:
-                 document.write("Vui lòng chọn thức uống !!!")
+    let menu = "Mời bạn chọn đồ uống \n" +
+        "1. Cafe \n" +
+        "2. Cam vắt \n" +
+        "3. Nước ép cà rốt" +
+        "4. Nước ép cà chua" +
+        "5. Nước lọc" +
+        "6. Nước dừa" +
+        "7. Thoát Menu";
+    let choose;
+    let tolal;
+    do {
+        choose = parseInt(prompt(menu));
+        let amount = 0;
+        let price = 0;
+        switch (choose) {
+            case 1:
+                price = 10000;
+                break;
+            case 2:
+                price = 15000;
+                break;
+            case 3:
+                price = 15000;
+                break;
+            case 4:
+                price = 17000;
+                break;
+            case 5:
+                price = 10000;
+                break;
+            case 6:
+                price = 7000;
+                break;
+            case 7:
+                price = 12000;
+                break;
+                default:
+                    continue;
         }
-    }
+        amount = parseInt(prompt("Nhập vào số lượng đồ uống" ));
+        tolal += amount * price;
+    }while (choose !== 7);
+    alert("Tổng số tiền người dùng phải trả là: " + tolal);
 </script>
 </body>
 </html>
